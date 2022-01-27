@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.a0b50bb1529a76602e520dc87934f3fe.js"
+  "precache-manifest.6ae32f5e04727b6cd915d2b1a1d1cfd1.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "pomotoro"});
