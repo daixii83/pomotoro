@@ -4,16 +4,16 @@ module.exports = {
   // 修改 webpack 設定，改 title
   chainWebpack (config) {
     config.plugin('html').tap(args => {
-      args[0].title = '番茄鐘'
+      args[0].title = 'pomotoro'
       return args
     })
   },
   pwa: {
     manifestOptions: {
-      name: '番茄鐘',
-      short_name: '番茄鐘',
-      theme_color: '#4DBA87',
-      background_color: '#4DBA87',
+      name: 'pomotoro',
+      short_name: 'pomotoro',
+      theme_color: '#D9564A',
+      background_color: '#D9564A',
       scope: './',
       start_url: './',
       display: 'standalone',

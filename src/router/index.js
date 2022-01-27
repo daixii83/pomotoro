@@ -19,7 +19,7 @@ const routes = [
     name: 'Settings',
     component: () => import(/* webpackChunkName: "settings" */ '../views/Settings.vue'),
     meta: {
-      title: '番茄鐘 | 設定'
+      title: '番茄鐘 | 音樂設定'
     }
   },
   {
@@ -27,7 +27,7 @@ const routes = [
     name: 'List',
     component: () => import(/* webpackChunkName: "list" */ '../views/List.vue'),
     meta: {
-      title: '番茄鐘 | 事項'
+      title: '番茄鐘 | 圖表'
     }
   },
   {

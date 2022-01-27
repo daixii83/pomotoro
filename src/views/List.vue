@@ -1,52 +1,42 @@
 <template lang="pug">
 #list
-  b-container
-    b-row
-      b-col(cols="12")
-        h1.text-center 待辦事項
-      b-col(cols="12")
-        b-form-group(label="新增事項" label-for="newinput" invalid-feedback="字數太少")
-          b-form-input#newinput(v-model="newinput" :state="newinputstate" @keydown.enter="additem")
-        b-btn.w-25.d-block.mx-auto(variant="success" block @click="additem") 新增
-      b-col.my-3(cols="12")
-        b-table(:items="items" :fields="fields" show-empty striped hover)
-          template(#empty)
-            p.text-center 沒有項目
-          template(#cell(name)="data")
-            b-form-input(
-              v-if="data.item.edit"
-              v-model="data.item.model"
-              :state="data.item.state"
-              @keydown.enter="submitedit(data.index)"
-              @keydown.esc="canceledit(data.index)"
-            )
-            span(v-else) {{ data.value }}
-          template(#cell(action)="data")
-            span(v-if="data.item.edit")
-              b-btn.mx-1(variant="success")
-                b-icon(icon="check" @click="submitedit(data.index)")
-              b-btn.mx-1(variant="danger")
-                b-icon(icon="arrow-counterclockwise" @click="canceledit(data.index)")
-            span(v-else)
-              b-btn.mx-1(variant="success")
-                b-icon(icon="pencil" @click="edititem(data.index)")
-              b-btn.mx-1(variant="danger")
-                b-icon(icon="trash" @click="delitem(data.index)")
-      b-col(cols="12")
-        h1.text-center 已完成
-      b-col(cols="12")
-        b-table-simple(striped hover)
-          thead
-            th 名稱
-            th 操作
+  b-container-fluid#container
+    b-row.h-100.d-flex.m-0
+      b-col.pl-5#leftBlock(cols='6')
+        #title.ml-5.mt-5
+          img(src='../assets/tomato.png' alt='tomato')
+          p Done
+        #line.ml-5
+        b-table-simple#table(striped hover)
           tbody
             tr(v-for="(item, idx) in finished")
+              td
+                img(src='../assets/checked.png' alt='checked')
               td {{ item }}
               td
-                b-btn(variant="danger" @click="delfinish(idx)")
-                  b-icon(icon="trash")
+                b-btn#del(variant="outline-danger" @click="delfinish(idx)")
+                  img(src='../assets/cancel.png' alt='skip')
             tr(v-if="finished.length === 0")
-              td.text-center(colspan="2") 沒有項目
+              td.text-center(colspan="2") No Completed Mission
+        #nowPlaying
+          b-btn#pause1.mx-1(variant="primary" @click="pause")
+            img(src='../assets/pause1.png' alt='pause')
+          #timeBar1
+            b-progress(:value="40" height="10px")
+          #topNo1
+            p The First Thing To Do Today
+            h5 09:20
+      b-col#rightBlock.p-0(cols='6')
+        #title.ml-5.mt-5
+          img(src='../assets/tomato.png' alt='tomato')
+          p Focus Time
+        #line.ml-5
+        img#date(src='../assets/date.png' alt='date')
+        #title.ml-5.mt-5
+          img(src='../assets/tomato.png' alt='tomato')
+          p Chart
+        #line.ml-5
+        img#chart(src='../assets/chart01.png' alt='date')
 </template>
 
 <script>

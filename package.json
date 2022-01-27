@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
+    "@vue/cli": "^4.5.15",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
@@ -47,5 +48,18 @@
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-bootstrap-vue": "~0.8.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daixii83/pomotoro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daixii83/pomotoro/issues"
+  },
+  "homepage": "https://github.com/daixii83/pomotoro#readme"
 }

@@ -1,4 +1,451 @@
+#app
+  overflow auto
+  font-family reross-rectangular, sans-serif
+  font-weight 400
+  font-style normal
+  position relative
+  background #FFE5B5
+  width 100%
+  height 100vh
+  padding 0
+  margin 0
+  float right
+
+#container
+  height 100vh
+
+.b-row
+  margin 0
+
+#btnGroup
+  position absolute
+  right 10px
+  z-index 99
+
+#navBtn
+  background #FFE5B5
+  border none
+  margin 5px
+  padding 1rem
+  display flex
+  border-top-left-radius 50px
+  border-bottom-left-radius 50px
+  &:active
+    background white
+  &:focus
+    background white
+  img
+    width 70%
+
+#home
+  width auto
+  height 100vh
+  margin 0
+  padding 0
+
+#leftBlock
+  flex-direction column
+  align-items center
+  position relative
+
+#toDo
+  display flex
+  justify-content center
+  align-items center
+  width 95%
+  height 13%
+  background white
+  border-radius 65px
+  h1
+    font-size 2.6rem
+  text-align center
+  margin 1rem
+  position absolute
+  top 12%
+  left 12%
+
+#triangle
+  width 0
+  height 0
+  border-style solid
+  border-width 0 10px 100px 70px
+  border-color transparent transparent #ffffff transparent
+  transform rotate(120deg)
+  position absolute
+  top 19.5%
+  left 102%
+
+#eventList
+  width 70%
+  position absolute
+  left 18%
+  top 35%
+  text-align center
+  p
+    font-size 2rem
+    color #333333
+
+#listItem
+  font-size 2rem
+  color #333333
+
+#selectBtn
+  width 40px
+  height 40px
+  background transparent
+  border-radius 50%
+  border 5px solid #D9674E
+
+#playBtn
+  position relative
+  width 40px
+  height 40px
+  border-radius 50%
+  background-color white
+  img
+    position absolute
+    top 0
+    left 0
+    width 40px
+    height 40px
+
+#addEvent
+  width 75%
+  position absolute
+  left 15.5%
+  top 63%
+
+#inputEvent
+  width 70%
+  height 90px
+  border 1px solid #D9674E
+  font-size 1.8rem
+  &::-webkit-input-placeholder
+    color #D9564A80
+
+#addBtn
+  width 15%
+  height 90px
+  border 1px solid #D9674E
+  background #FFFFFF
+
+#notification
+  width 79%
+  height 12%
+  box-sizing border-box
+  background #FFFFFF80
+  padding 1rem
+  position absolute
+  left 13%
+  bottom 4%
+
+#topNo
+  color #707070
+  font-size 1rem
+  display flex
+
+#text2
+  color #858C51
+  position absolute
+  right 2rem
+  font-size 1.5rem
+
+#btmNo
+  color #707070
+  font-size 1.4rem
+  display flex
+  justify-content flex-start
+  padding-left 1rem
+  p
+    position absolute
+    top 55%
+    left 12%
+    margin 0
+
+  img
+    width 35px
+    height 35px
+    margin-right 2rem
+
+#rightBlock
+  position relative
+
+#tomatoTop1
+  width 23%
+  height 5.5%
+  background #858C51
+  border-radius 50%
+  position absolute
+  top 14%
+  right 43%
+  z-index 9
+
+#tomatoTop2
+  width 7.5%
+  height 14.5%
+  background #858C51
+  border-radius 50%
+  position absolute
+  top 9%
+  right 50.5%
+  z-index 9
+
+#tomato1
+  width 44px
+  height 44px
+  background #333333
+  border-radius 50%
+  position absolute
+  top 24%
+  right 62%
+  z-index 9
+
+#tomato2
+  width 44px
+  height 44px
+  background #333333
+  border-radius 50%
+  position absolute
+  top 24%
+  right 42%
+  z-index 9
+
+#tomatoBtm
+  width 75%
+  height 58%
+  background #D9564A
+  border-radius 50%
+  position absolute
+  top 16.5%
+  right 17.5%
+  img
+    position absolute
+    top 26%
+    right 39%
+    z-index 9
+
+#timeLeft
+  z-index 99
+  position absolute
+  top 42%
+  right 32%
+  h2
+    font-size 9rem
+    color white
+
+#timeBar
+  background white
+  width 88%
+  height 10px
+  border-radius 30px
+  position absolute
+  top 77%
+  right 9%
+
+#play
+  background transparent
+  border none
+  position absolute
+  bottom 8%
+  right 46%
+  img
+    width 80%
+
+#pause
+  background transparent
+  border none
+  position absolute
+  bottom 8%
+  right 46%
+  img
+    width 80%
+
+#skip
+  background transparent
+  border none
+  position absolute
+  bottom 10.5%
+  right 34%
+  img 
+    width 80%
+
+.progress-bar
+  background #D9564A
+
+// setting頁面 樣式
+
 #settings
-  table
-    tr
-      cursor pointer
+  position relative
+  width auto
+  height 100vh
+  margin 0
+  padding 0
+
+#title
+  display flex
+  height 10%
+  align-items flex-end
+  img
+    width 75px
+  p
+    font-size 2.6rem
+    margin-left 1rem
+    margin-bottom -10px
+    color #D9674E
+#line
+  width 75%
+  height 5px
+  background #D9674E
+  margin-top 5px
+
+#ringlist
+  display flex
+  margin-top 3rem
+  margin-left 3rem
+
+.form-group
+  display flex
+  font-size 2rem
+  margin-right 20px
+  float left
+  width 33%
+  display flex
+  color #707070
+
+.custom-control-label
+  cursor pointer
+  &::before
+    width 20px
+    height 20px
+    border 3px solid #707070
+    background none
+    margin-top 7px
+  &::after
+    width 10px
+    height 10px
+    border-radius 50%
+    background #D9564A
+    top 0.55rem
+    left -1.2rem
+    background-image none !important
+    opacity 0
+    margin-top 5px
+
+.custom-control-input
+  &:checked ~ 
+    .custom-control-label
+      color #D9674E
+      &::before
+        width 20px
+        height 20px
+        border 3px solid #D9564A
+        background none
+      &::after
+        position absolute
+        top 11px
+        opacity 1
+
+#nowPlaying
+  width 90%
+  height 10%
+  background #FFFFFF80
+  position absolute
+  left 0
+  bottom 0
+
+#group
+  overflow hidden
+  width 80%
+  height 45%
+  position absolute
+  bottom 0
+  left 7%
+  img
+    width 100%
+
+#pause1
+  background transparent
+  border none
+  position absolute
+  bottom 8%
+  left -3%
+  img
+    width 55%
+
+#timeBar1
+  background white
+  width 85%
+  height 10px
+  border-radius 30px
+  position absolute
+  top 72%
+  left 12%
+  .progress-bar
+    background #F28F6B
+
+#topNo1
+  color #707070
+  font-size 1rem
+  display flex
+  p
+    font-size 1.5rem
+    position absolute
+    top 20%
+    left 12%
+  h5
+    font-size 2.2rem
+    position absolute
+    top 15%
+    right 5%
+
+// chart 頁面樣式
+#list
+  position relative
+  width auto
+  height 100vh
+  margin 0
+  padding 0
+
+#completedList
+  display flex
+  position relative
+  margin-left 7%
+  margin-top 5%
+  font-size 1.5rem
+  color #707070
+  p
+    position absolute
+    top 20%
+    left 5%
+
+#date
+#chart
+  position relative
+  left 10%
+  top 5%
+
+#table
+  width 65%
+  position absolute
+  left 12%
+  font-size 1.5rem
+  .btn
+    position relative
+    width 40px
+    height 40px
+    img
+      position absolute
+      top 5px
+      left 5px
+      width 30px
+      height 30px
+
+
+
+
+
+
+
+
+
+
